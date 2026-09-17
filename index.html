@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Prashant | Best Dental & Maxillofacial Surgeon in Jaunpur</title>
+    <meta name="description" content="Dr. Prashant at Prakash Dental Hospital - Expert in Frontal Lobe Surgery, Facial Trauma, Dental Implants. Open Sunday till 2 PM. Call: 094555 00546">
+    <meta name="keywords" content="Dr Prashant, Dental Surgeon Jaunpur, Frontal Lobe Surgery, Facial Trauma, Dental Implants, Prakash Dental Hospital">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0F2A47;
+            --secondary: #1E3A5F;
+            --accent: #D4AF37;
+            --accent-light: #E8C547;
+            --text: #2C3E50;
+            --text-light: #6B7B8C;
+            --bg: #FFFFFF;
+            --bg-alt: #F8F9FA;
+            --border: #E8ECEF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; width: 100%; }
+
+        /* HEADER */
+        header {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        nav { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; gap: 45px; list-style: none; align-items: center; }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* HERO - one.jpg */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            background: url('images/one.jpg') center/cover no-repeat;
+            margin-top: 90px;
+            width: 100%;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 42, 71, 0.95) 0%, rgba(15, 42, 71, 0.7) 100%);
+        }
+
+        .hero-content { position: relative; z-index: 2; color: white; max-width: 800px; }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 { font-size: 4.5rem; color: white; margin-bottom: 30px; font-weight: 800; }
+
+        .hero p { font-size: 1.35rem; opacity: 0.95; margin-bottom: 50px; font-weight: 300; max-width: 650px; }
+
+        .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+
+        /* STATS */
+        .stats-bar { background: var(--primary); padding: 60px 0; width: 100%; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+
+        .stat-item h3 { font-size: 3rem; color: var(--accent); font-family: 'Inter', sans-serif; font-weight: 700; }
+
+        .stat-item p { color: rgba(255,255,255,0.8); font-size: 0.95rem; text-transform: uppercase; }
+
+        /* SECTIONS */
+        section { padding: 120px 0; width: 100%; }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .section-title { margin-bottom: 70px; text-align: center; }
+        .section-title h2 { font-size: 3rem; margin-bottom: 20px; }
+        .section-title p { font-size: 1.15rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        /* ABOUT - two.jpg */
+        .about { background: var(--bg); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+        
+        .about-image { position: relative; }
+        .about-image img {
+            width: 100%;
+            height: 650px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 30px; left: 30px; right: -30px; bottom: -30px;
+            border: 3px solid var(--accent);
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        .about-content h2 { font-size: 2.8rem; margin-bottom: 30px; }
+        .about-content p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 25px; }
+        .signature { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary); font-style: italic; margin-top: 40px; }
+
+        /* SPECIALTIES - three.jpg */
+        .specialties { background: var(--bg-alt); }
+        .specialties-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+
+        .specialties-image img { width: 100%; height: 100%; object-fit: cover; }
+        .specialties-image { min-height: 700px; }
+
+        .specialties-content {
+            background: var(--primary);
+            padding: 80px 60px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .specialties-content h2 { color: white; font-size: 2.8rem; margin-bottom: 30px; }
+        .specialties-content > p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 40px; }
+
+        .feature-list { list-style: none; margin-bottom: 50px; }
+        .feature-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 1.1rem;
+        }
+        .feature-list li::before { content: '✓'; color: var(--accent); font-weight: bold; font-size: 1.3rem; }
+
+        /* BEFORE/AFTER - five.jpg & six.jpg */
+        .before-after { background: var(--bg); }
+        .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .ba-card { text-align: center; }
+        .ba-card img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .ba-card h3 { font-size: 1.5rem; margin-top: 20px; }
+        .ba-before { color: var(--text-light); }
+        .ba-after { color: var(--accent); }
+
+        /* CREDENTIALS - four.jpg */
+        .credentials { background: var(--bg-alt); text-align: center; }
+        .credential-frame {
+            display: inline-block;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            max-width: 800px;
+            width: 100%;
+        }
+        .credential-frame img { width: 100%; height: auto; border-radius: 8px; }
+        .credential-text { margin-top: 40px; max-width: 700px; margin: 40px auto 0; }
+        .credential-text h3 { font-size: 2rem; margin-bottom: 20px; }
+        .credential-text p { font-size: 1.1rem; color: var(--text-light); }
+
+        /* GALLERY - Additional Photos */
+        .gallery { background: var(--bg); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* TESTIMONIALS */
+        .testimonials { background: var(--bg-alt); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .testimonial-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent);
+        }
+        .stars { color: #FFB800; font-size: 1.3rem; margin-bottom: 25px; }
+        .testimonial-card p { font-size: 1.1rem; font-style: italic; margin-bottom: 30px; }
+        .patient-name { font-weight: 700; color: var(--primary); font-family: 'Playfair Display', serif; }
+
+        /* CONTACT */
+        .contact { background: var(--primary); color: white; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        .contact-info .section-label { color: var(--accent); }
+        .contact-info h2 { color: white; font-size: 3rem; margin-bottom: 30px; }
+        .contact-info > p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 50px; }
+        
+        .contact-detail { display: flex; gap: 25px; margin-bottom: 40px; align-items: flex-start; }
+        .contact-icon {
+            width: 60px; height: 60px;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; flex-shrink: 0;
+        }
+        .contact-detail h4 { color: var(--accent); font-family: 'Inter', sans-serif; font-size: 1rem; margin-bottom: 8px; font-weight: 600; }
+        .contact-detail p { opacity: 0.9; font-size: 1.1rem; }
+        
+        .map-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            height: 100%;
+            min-height: 500px;
+        }
+        .map-wrapper iframe { width: 100%; height: 100%; border: 0; }
+
+        /* FOOTER */
+        footer {
+            background: #0A1F35;
+            color: rgba(255,255,255,0.6);
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            width: 100%;
+        }
+        footer strong { color: white; }
+
+        /* FLOATING CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 40px; right: 40px;
+            background: #DC2626;
+            color: white;
+            padding: 20px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.5rem; }
+            .about-grid, .specialties-layout, .contact-grid, .ba-grid { grid-template-columns: 1fr; gap: 60px; }
+            .specialties-image { min-height: 500px; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            .hero h1 { font-size: 2.5rem; }
+            .section-title h2 { font-size: 2.2rem; }
+            .nav-links { 
+                display: none; 
+                position: absolute; 
+                top: 90px; left: 0; right: 0; 
+                background: white; 
+                flex-direction: column; 
+                padding: 30px; 
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu { display: block; }
+            .floating-cta { bottom: 20px; right: 20px; padding: 15px 25px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Dr. Prashant<span>.</span></div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#specialties">Specialties</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Book Now</a></li>
+                </ul>
+                <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO - one.jpg -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Jaunpur's Leading Medical Expert</span>
+                <h1>Advanced Dental & Maxillofacial Trauma Surgery</h1>
+                <p>Expert surgical care for facial fractures, frontal lobe surgery, and emergency trauma. Precision, compassion, and excellence in every treatment.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                    <a href="tel:09455500546" class="btn btn-outline" style="border-color: white; color: white;">📞 Emergency: 094555 00546</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>4.9★</h3>
+                    <p>Patient Rating</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Emergency Care</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10K+</h3>
+                    <p>Procedures Done</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Sterile Facility</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT - two.jpg -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/two.jpg" alt="Dr. Prashant - Lead Surgeon" width="600" height="650" loading="lazy" onerror="this.src='https://via.placeholder.com/600x650?text=Dr+Prashant'">
+                </div>
+                <div class="about-content">
+                    <span class="section-label">Meet Your Surgeon</span>
+                    <h2>Dedicated to Restoring Health & Confidence</h2>
+                    <p>Dr. Prashant is a distinguished specialist in advanced restorative dentistry and complex maxillofacial trauma surgery. With profound expertise in facial anatomy, he leads a highly trained team committed to painless, precise, and life-changing treatments.</p>
+                    <p>Whether you need routine dental care or emergency surgical repair for facial bone fractures, our Jaunpur clinic is equipped with state-of-the-art technology to ensure the highest standard of medical excellence.</p>
+                    <div class="signature">Dr. Prashant</div>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 40px;">Book Your Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIALTIES - three.jpg -->
+    <section class="specialties" id="specialties">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Core Specialties</span>
+                <h2>Advanced Surgical Expertise</h2>
+                <p>Comprehensive care for complex dental and maxillofacial conditions</p>
+            </div>
+            <div class="specialties-layout">
+                <div class="specialties-image">
+                    <img src="images/three.jpg" alt="Surgical Procedure" width="700" height="700" loading="lazy" onerror="this.src='https://via.placeholder.com/700x700?text=Surgery'">
+                </div>
+                <div class="specialties-content">
+                    <span class="section-label">Surgical Excellence</span>
+                    <h2>Maxillofacial & Trauma Surgery</h2>
+                    <p>Critical, high-precision surgical intervention for severe injuries and complex reconstructions that general clinics cannot handle.</p>
+                    <ul class="feature-list">
+                        <li>Nasal & Skull Bone Fracture Repair</li>
+                        <li>Frontal Lobe Surgery</li>
+                        <li>Jaw (Mandible) Reconstruction & Alignment</li>
+                        <li>Facial Soft Tissue & Ear Trauma Repair</li>
+                        <li>Advanced Dental Implants & Full Mouth Rehabilitation</li>
+                        <li>Painless Root Canals & Emergency Extractions</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Discuss Your Case</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE/AFTER RESULTS - five.jpg & six.jpg -->
+    <section class="before-after" id="results">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Transformation Gallery</span>
+                <h2>Before & After Results</h2>
+                <p>Real patients, real results from Dr. Prashant's expert care</p>
+            </div>
+            <div class="ba-grid">
+                <div class="ba-card">
+                    <img src="images/five.jpg" alt="Before Treatment" width="500" height="450" loading="lazy" onerror="this.src='https://via.placeholder.com/500x450?text=Before+Treatment'">
+                    <h3 class="ba-before">Before Treatment</h3>
+                </div>
+                <div class="ba-card">
+                    <img src="images/six.jpg" alt="After Treatment" width="500" height="450" loading="lazy" onerror="this.src='https://via.placeholder.com/500x450?text=After+Treatment'">
+                    <h3 class="ba-after">After Treatment</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY - Additional Photos -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Clinic Gallery</span>
+                <h2>Our Facility & More Results</h2>
+                <p>Take a look at our modern, well-equipped clinic and successful treatments</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/one.jpg" alt="Hospital Building" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Clinic+1'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/two.jpg" alt="Dr. Prashant" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Clinic+2'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/three.jpg" alt="Surgery Room" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Clinic+3'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/four.jpg" alt="Certificates" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Clinic+4'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/five.jpg" alt="Patient Case" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Clinic+5'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/six.jpg" alt="Success Story" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Clinic+6'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENTIALS - four.jpg -->
+    <section class="credentials" id="credentials">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Verified Excellence</span>
+                <h2>Certified Medical Authority</h2>
+                <p>Committed to the highest medical standards and continuous education</p>
+            </div>
+            <div class="credential-frame">
+                <img src="images/four.jpg" alt="Medical Credentials" width="800" height="600" loading="lazy" onerror="this.src='https://via.placeholder.com/800x600?text=Certificate'">
+            </div>
+            <div class="credential-text">
+                <h3>Uncompromising Standards</h3>
+                <p>Prakash Dental Hospital & Trauma Center operates under strict national medical guidelines, ensuring verified qualifications, continuous education, and uncompromising hygiene protocols for every patient in Jaunpur.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Patient Stories</span>
+                <h2>Trusted by Hundreds in Jaunpur</h2>
+                <p>Real experiences from our valued patients</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"This is the Best Dental Hospital in Jaunpur. The Doctor & Staff are very kind, supportive, and the treatment was absolutely top-notch."</p>
+                    <div class="patient-name">- Verified Patient</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Doctor sahab ka treatment bhut hi best hai. I got my tooth extraction done completely painless. Nice Hospital, I am very satisfied."</p>
+                    <div class="patient-name">- Happy Patient</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Very nice hospital, very nice staff. The doctor's behavior is excellent and he explains everything clearly. Highly recommended for trauma care."</p>
+                    <div class="patient-name">- Local Resident</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Get In Touch</span>
+                    <h2>Begin Your Journey to Recovery</h2>
+                    <p>Do not delay your dental or trauma care. Contact our clinic today to schedule a consultation or seek immediate emergency assistance.</p>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Visit Our Clinic</h4>
+                            <p>First Floor, Shahikila, Gopal Katra, Sipah Rd,<br>Dhalger Tola, Rizwikhan, Jaunpur, UP 222001</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Call Us Directly</h4>
+                            <p><a href="tel:09455500546" style="color: white; font-weight: 700; font-size: 1.3rem;">094555 00546</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Sat: 10:00 AM - 8:00 PM<br>Sunday: Till 2:00 PM</p>
+                        </div>
+                    </div>
+                    <a href="tel:09455500546" class="btn btn-primary" style="margin-top: 30px;">Call Now to Book</a>
+                </div>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.0!2d82.68!3d25.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQ1JzAwLjAiTiA4MsKwNDAnNDguMCJF!5e0!3m2!1sen!2sin!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <strong>Dr. Prashant at Prakash Dental Hospital</strong>. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Best Dental Surgeon in Jaunpur, Uttar Pradesh | Emergency 24/7</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING CTA -->
+    <a href="tel:09455500546" class="floating-cta">
+        <span>🚨</span> Emergency Call
+    </a>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
